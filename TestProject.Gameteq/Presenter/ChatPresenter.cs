@@ -1,3 +1,4 @@
+using System.Net;
 using TestProject.Gameteq.Model;
 using TestProject.Gameteq.View;
 
@@ -31,18 +32,18 @@ internal sealed class ChatPresenter
     /// <summary>
     /// Initializing the presenter.
     /// </summary>
-    public async Task Initialize()
+    /// <param name="ip">IP address of the server</param>
+    /// <param name="port">Portof the server</param>
+    public async Task Initialize(IPAddress ip, int port)
     {
         var username = _chatView.Initialize(_cancellationToken.Token);
 
         Console.CancelKeyPress += (sender, e) =>
         {
-            Console.Clear();
-            Console.WriteLine("Shutting down...");
             _cancellationToken.Cancel();
             e.Cancel = true;
         };
 
-        await _chatModel.Initialize("127.0.0.1", 3333, username, _cancellationToken.Token);
+        await _chatModel.Initialize(ip, port, username, _cancellationToken.Token);
     }
 }

@@ -1,3 +1,4 @@
+using System.Net;
 using System.Net.Sockets;
 using System.Text;
 using System.Text.Json;
@@ -44,14 +45,24 @@ internal sealed class ChatModel()
     /// <param name="serverPort">Port of the server</param>
     /// <param name="username">Current user's nickname</param>
     /// <param name="cancellationToken">Cancellation token</param>
-    public async Task Initialize(string serverIp, int serverPort, string username, CancellationToken cancellationToken)
+    public async Task Initialize(IPAddress serverIp, int serverPort, string username, CancellationToken cancellationToken)
     {
         user = new User(username, _colors[Random.Shared.Next(0, _colors.Length)]);
 
         _cancellationToken = cancellationToken;
 
         var client = new TcpClient();
-        await client.ConnectAsync(serverIp, serverPort);
+        try
+        {
+            await client.ConnectAsync(serverIp, serverPort);
+        }
+        catch (Exception e)
+        {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.WriteLine($"Failed to connect to server: {e.Message}");
+            return;
+        }
+        
         await Receive(client, user);
     }
 
@@ -142,6 +153,7 @@ internal sealed class ChatModel()
         }
         finally
         {
+            Console.WriteLine($"Disconnected from server.");
             client.Close();
         }
     }
