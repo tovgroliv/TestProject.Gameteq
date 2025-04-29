@@ -11,15 +11,43 @@ Console client-server chat application. The application operates on the TCP/IP p
  - .Net 8.0
  - Linux/Windows/macOS
 
-### Run
+### Run from release
 
-Download from the Releases section or build it yourself using the following command.
+Download the required build for your architecture from the Releases section. Then start the server and client one by one. Uses `127.0.0.1:3333` address by default.
+
+To run on the Windows platform, exe files are used. For other platforms or if you want to change the default address, use the following commands.
+
+Run the server.
 
 ```
-dotnet run
+./TestProject.Gameteq.Server 127.0.0.1 3333
 ```
 
-### Build
+Run the client.
+
+```
+./TestProject.Gameteq 127.0.0.1 3333
+```
+
+### Run without build
+
+To run without assembly, you need to install .NET 8 from the official website and clone this repository. Then use the following commands.
+
+Run the server.
+
+```
+cd TestProject.Gameteq && cd TestProject.Gameteq.Server
+dotnet run 127.0.0.1 3333
+```
+
+Run the client.
+
+```
+cd TestProject.Gameteq && cd TestProject.Gameteq
+dotnet run 127.0.0.1 3333
+```
+
+### Build from source
 
 #### Window
 
