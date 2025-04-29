@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject.Gameteq", "Test
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject.Gameteq.Common", "TestProject.Gameteq.Common\TestProject.Gameteq.Common.csproj", "{54F10697-7FFF-4E99-9844-DDAEE409C700}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject.Gameteq.Server", "TestProject.Gameteq.Server\TestProject.Gameteq.Server.csproj", "{0797FE65-C084-4010-AA91-8206D3C618F6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,5 +22,13 @@ Global
 		{3D18FB49-3E39-4779-8F7C-F6CA27DCFE18}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D18FB49-3E39-4779-8F7C-F6CA27DCFE18}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D18FB49-3E39-4779-8F7C-F6CA27DCFE18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54F10697-7FFF-4E99-9844-DDAEE409C700}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54F10697-7FFF-4E99-9844-DDAEE409C700}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54F10697-7FFF-4E99-9844-DDAEE409C700}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54F10697-7FFF-4E99-9844-DDAEE409C700}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0797FE65-C084-4010-AA91-8206D3C618F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0797FE65-C084-4010-AA91-8206D3C618F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0797FE65-C084-4010-AA91-8206D3C618F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0797FE65-C084-4010-AA91-8206D3C618F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
