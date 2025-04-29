@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject.Gameteq", "TestProject.Gameteq\TestProject.Gameteq.csproj", "{3D18FB49-3E39-4779-8F7C-F6CA27DCFE18}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestProject.Gameteq.Common", "TestProject.Gameteq.Common\TestProject.Gameteq.Common.csproj", "{54F10697-7FFF-4E99-9844-DDAEE409C700}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
